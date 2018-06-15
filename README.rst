@@ -4,7 +4,9 @@
 Installing dependencies:
 
     git clone https://github.com/daedalus/fastBloomFilter
+
     cd fastbloomfilter
+
     sudo pip install -e .
 
     or
