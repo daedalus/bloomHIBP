@@ -1,10 +1,11 @@
 # Bloom HIBP – check Have i been Pwnd with bloom filters in pure python
+# idea taken from https://www.bloomingpassword.fun/
 
-
-
-Installing:
+Installing dependencies:
 
     git clone https://github.com/daedalus/fastBloomFilter
+    cd fastbloomfilter
+    sudo pip install -e .
 
     or
    
@@ -16,6 +17,6 @@ Geting the HIBP file (https://downloads.pwnedpasswords.com/passwords/pwned-passw
   
 Using:
 
-    python3 loadbloom.py 40.txt HIBP_128MB.blf
+    python3 loadbloom.py 512MB 40.txt HIBP_128MB.blf
 
     python3 checkbloom HIBP_128MB.blf "blah"

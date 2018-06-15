@@ -6,12 +6,12 @@ import bloom
 import sys
 import fileinput
 
-SIZEMB=128
+SIZEMB=int(sys.argv[1])
 bf = bloom.BloomFilter(array_size=(1024**2)*SIZEMB,do_hashing=False,slice_bits=120,slices=7,ishex=True)
 
 new=0
 seen=0
-fp = open(sys.argv[1],'r+')
+fp = open(sys.argv[2],'r+')
 for line in fp:
     try:
         #h=str(int(line.rstrip(),16)).encode('utf8')
@@ -27,6 +27,6 @@ for line in fp:
     print("new:%d seen:%d" %(new,seen))
 
 if new > 0:
-    bf.save(sys.argv[2])
+    bf.save(sys.argv[3])
 fp.close()
 
