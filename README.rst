@@ -19,6 +19,6 @@ Geting the HIBP file (https://downloads.pwnedpasswords.com/passwords/pwned-passw
   
 Using:
 
-    python3 loadbloom.py 512MB 40.txt HIBP_128MB.blf
+    python3 loadbloom.py 512MB 40.txt HIBP_512MB.blf
 
     python3 checkbloom HIBP_128MB.blf "blah"
