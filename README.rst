@@ -21,4 +21,4 @@ Using:
 
     python3 loadbloom.py 512MB 40.txt HIBP_512MB.blf
 
-    python3 checkbloom HIBP_128MB.blf "blah"
+    python3 checkbloom HIBP_512MB.blf "blah"
