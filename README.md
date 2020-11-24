@@ -21,7 +21,7 @@ or
 sudo pip install fastbloomfilter
 ```
 
-### Geting the HIBP file (https://downloads.pwnedpasswords.com/passwords/pwned-passwords-ordered-2.0.txt.7z.torrent): ###
+### Grab the HIBP file (https://downloads.pwnedpasswords.com/passwords/pwned-passwords-ordered-2.0.txt.7z.torrent): ###
 
 ```
 7z e -so -bd pwned-passwords-ordered-2.0.txt.7z | cut -c 1-40 > 40.txt
