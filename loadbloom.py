@@ -11,22 +11,21 @@ bf = bloom.BloomFilter(array_size=(1024**2)*SIZEMB,do_hashing=False,slice_bits=1
 
 new=0
 seen=0
-fp = open(sys.argv[2],'r+')
-for line in fp:
-    try:
-        #h=str(int(line.rstrip(),16)).encode('utf8')
-        h = line.rstrip()
-        #print(h)
-    except:
-        h=None
-    if h != None:
-        if bf.update(h)==False:
-            new+=1
-        else:
-            seen+=1
-    print("new:%d seen:%d" %(new,seen))
+with open(sys.argv[2],'r+') as fp:
+    for line in fp:
+        try:
+            #h=str(int(line.rstrip(),16)).encode('utf8')
+            h = line.rstrip()
+            #print(h)
+        except:
+            h=None
+        if h != None:
+            if bf.update(h)==False:
+                new+=1
+            else:
+                seen+=1
+        print("new:%d seen:%d" %(new,seen))
 
-if new > 0:
-    bf.save(sys.argv[3])
-fp.close()
+    if new > 0:
+        bf.save(sys.argv[3])
 
